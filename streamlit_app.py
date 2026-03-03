@@ -3,8 +3,9 @@ import pandas as pd
 import numpy as np
 
 st.set_page_config(page_title="Data Insights Pro", layout="wide")
-
-st.title("📊 Simple Data Analysis Dashboard")
+st.subheader("Statistical Summary")
+st.dataframe(df.describe().style.format("{:.2f}"))
+st.title("Data Analysis Dashboard")
 st.write("Upload a CSV file to get started.")
 
 uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
